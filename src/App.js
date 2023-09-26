@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
 
+// Episode 2: JSX, Components, Props
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <User name="Pedro" age={21} email="pedro@pedro.com" />
+      <User name="Jake" age={29} email="jake@pedro.com" />
+      <User name="Jessica" age={190} email="jessica@pedro.com" />
     </div>
   );
 }
+
+// User component
+const User = (props) => {
+  return (
+    <div>
+      <h1>{props.name}</h1>
+      <h2>{props.age}</h2>
+      <h2>{props.email}</h2>
+    </div>
+  );
+};
 
 export default App;
